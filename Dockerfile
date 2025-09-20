@@ -1,14 +1,14 @@
-# Step 1: Use official OpenJDK runtime
-FROM openjdk:11-jre-slim
+# Use a lightweight OpenJDK image
+FROM openjdk:17-jdk-slim
 
-# Step 2: Set working directory inside container
+# Set working directory
 WORKDIR /app
 
-# Step 3: Copy the jar file from Maven build into container
-COPY target/*.jar app.jar
+# Copy the jar file from target folder (Maven will create this)
+COPY target/java-docker-app-0.0.1-SNAPSHOT.jar app.jar
 
-# Step 4: Expose port 8080 (Spring Boot default)
+# Expose port 8080
 EXPOSE 8080
 
-# Step 5: Run the application
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+# Run the jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
