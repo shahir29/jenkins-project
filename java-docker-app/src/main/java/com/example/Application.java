@@ -16,7 +16,7 @@ public class Application {
     class HelloController {
         @GetMapping("/")
         public String home() {
-            return "Hello from Jenkins-deployed Spring Boot app!";
+            return "ommala aadine iruppa, thadukkave mudiyathuu !!!!!!!!!";
         }
     }
 }
