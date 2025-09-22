@@ -1,16 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.example</groupId>
     <artifactId>java-docker-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>java-docker-app</name>
-    <description>Spring Boot app running with Docker & Jenkins</description>
+    <description>Spring Boot app running with Docker &amp; Jenkins</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -24,19 +24,13 @@
     </properties>
 
     <dependencies>
-        <!-- Web dependency for REST APIs -->
+        <!-- Web dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Spring Boot Actuator (for health check, monitoring) -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <!-- Testing (optional) -->
+        <!-- Test dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -46,11 +40,12 @@
 
     <build>
         <plugins>
-            <!-- Spring Boot plugin for packaging -->
+            <!-- Maven plugin to build Spring Boot JAR -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
+
 </project>
